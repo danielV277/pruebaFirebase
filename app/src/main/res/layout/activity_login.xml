@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40sp"
+    tools:context=".login">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inicio sesion"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Correo"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"/>
+
+    <EditText
+        android:id="@+id/etCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ejemplo@gmail.com"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvCorreo"/>
+
+    <TextView
+        android:id="@+id/tvContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contraseña"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toBottomOf="@id/etCorreo"/>
+
+    <EditText
+        android:id="@+id/etContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="contraseña"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvContraseña"/>
+
+    <Button
+        android:id="@+id/btIngresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Ingresar"
+        android:layout_marginTop="30sp"
+        app:layout_constraintTop_toBottomOf="@id/etContraseña"/>
+
+    <Button
+        android:id="@+id/btRegistrarse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Registrarse"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btIngresar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
