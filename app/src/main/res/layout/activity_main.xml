@@ -35,6 +35,16 @@
         android:text="Salir"
         app:layout_constraintTop_toBottomOf="@+id/tvProvedor"/>
 
+    <Button
+        android:id="@+id/btMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btSalir"
+        android:text="Maps"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

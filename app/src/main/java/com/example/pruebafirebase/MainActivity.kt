@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         tvCorreo.text = correo
 
         val btSalir = findViewById<Button>(R.id.btSalir)
+        val btMap = findViewById<Button>(R.id.btMap)
 
         btSalir.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
@@ -28,6 +29,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentLogin)
             finish()
         }
+
+        btMap.setOnClickListener{
+            var intentMap = Intent(this,maps::class.java)
+            startActivity(intentMap)
+            finish()
+        }
+
+
 
     }
 }
