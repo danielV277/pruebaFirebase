@@ -1,5 +1,6 @@
 package com.example.pruebafirebase
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolylineOptions
 
 class maps : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var map:GoogleMap
@@ -31,6 +33,7 @@ class maps : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMaps: GoogleMap) {
         map = googleMaps
         createMarker()
+        dibujar(map)
     }
 
     private fun createMarker(){
@@ -43,5 +46,31 @@ class maps : AppCompatActivity(), OnMapReadyCallback {
             null
         )
 
+    }
+
+    private fun dibujar(googleMaps: GoogleMap){
+        val point = listOf(
+            LatLng(1.219367, -77.278120),
+            LatLng(1.216703, -77.283064),
+            LatLng(1.217648, -77.283872),
+            LatLng(1.217473, -77.284031),
+            LatLng(1.211678, -77.281535),
+            LatLng(1.210900, -77.283216),
+            LatLng(1.206530, -77.281085),
+            LatLng(1.207137, -77.279492),
+            LatLng(1.209883, -77.274243),
+            LatLng(1.210375, -77.273920),
+            LatLng(1.212445, -77.275561),
+            LatLng(1.213347, -77.275381),
+            LatLng(1.218690, -77.277445),
+            LatLng(1.219367, -77.278120)
+        )
+
+        val poligono = PolylineOptions()
+            .addAll(point)
+            .color(Color.BLUE)
+            .width(12f)
+
+        googleMaps.addPolyline(poligono)
     }
 }
