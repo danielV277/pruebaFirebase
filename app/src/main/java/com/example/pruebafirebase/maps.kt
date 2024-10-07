@@ -1,7 +1,9 @@
 package com.example.pruebafirebase
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,6 +24,11 @@ class maps : AppCompatActivity(), OnMapReadyCallback {
         enableEdgeToEdge()
         setContentView(R.layout.activity_maps)
         createFragment()
+
+        val btSalir = findViewById<Button>(R.id.btSalir)
+        btSalir.setOnClickListener{
+            finish()
+        }
     }
 
     private fun createFragment(){

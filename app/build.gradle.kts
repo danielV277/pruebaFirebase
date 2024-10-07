@@ -49,6 +49,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation ("org.osmdroid:osmdroid-android:6.1.10")
+    implementation ("org.osmdroid:osmdroid-geopackage:6.1.10")
+    implementation ("androidx.preference:preference:1.2.0")
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
     implementation("com.google.firebase:firebase-auth-ktx")

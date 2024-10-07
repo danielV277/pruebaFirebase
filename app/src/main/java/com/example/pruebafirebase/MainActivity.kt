@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val btSalir = findViewById<Button>(R.id.btSalir)
         val btMap = findViewById<Button>(R.id.btMap)
+        val btMapOpen = findViewById<Button>(R.id.btMapSteem)
 
         btSalir.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
@@ -33,10 +34,12 @@ class MainActivity : AppCompatActivity() {
         btMap.setOnClickListener{
             var intentMap = Intent(this,maps::class.java)
             startActivity(intentMap)
-            finish()
         }
 
-
+        btMapOpen.setOnClickListener{
+            var intentMapOpen = Intent(this,openStreem::class.java)
+            startActivity(intentMapOpen)
+        }
 
     }
 }
